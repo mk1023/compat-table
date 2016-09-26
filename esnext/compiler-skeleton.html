@@ -5,7 +5,7 @@
     <title>ECMAScript Next compatibility table - <!-- NAME --> test page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="../../master.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../jquery.min.js"></script>
     <script src="../../master.js"></script>
     <!-- POLYFILLS -->
     <script>
@@ -20,7 +20,7 @@
           var arr = [a, b, c, ,];
           var iterable = {
             next: function() {
-              return { value: arr.shift(), done: arr.length <= 0 }; 
+              return { value: arr.shift(), done: arr.length <= 0 };
             },
           };
           iterable[Symbol.iterator] = function(){ return iterable; }
@@ -41,7 +41,7 @@
   </div>
   <div id="body">
     <p class="warning">Please note that <em>some</em> compiled output <strong>may be buggy</strong> or not representative of the compiler's true support.</p>
-      
+
     <table id="table-wrapper" style="width:50%;">
       <colgroup>
         <col>
